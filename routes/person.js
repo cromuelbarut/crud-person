@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
 
 // 		res.json({ success: true, data: person });
 // 	} catch (err) {
-// 		if ((err.kind = 'ObjectId')) {
+// 		if (err.kind === 'ObjectId') {
 // 			return res
 // 				.status(404)
 // 				.json({ success: false, errors: [{ msg: 'Person not found' }] });
@@ -104,7 +104,7 @@ router.delete('/:id', async (req, res) => {
 
 		res.json({ success: true, msg: 'Person deleted successfully' });
 	} catch (err) {
-		if ((err.kind = 'ObjectId')) {
+		if (err.kind === 'ObjectId') {
 			return res
 				.status(404)
 				.json({ success: false, errors: [{ msg: 'Person not found' }] });
@@ -170,7 +170,7 @@ router.put(
 				data: person
 			});
 		} catch (err) {
-			if ((err.kind = 'ObjectId')) {
+			if (err.kind === 'ObjectId') {
 				return res
 					.status(404)
 					.json({ success: false, errors: [{ msg: 'Person not found' }] });
