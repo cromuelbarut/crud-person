@@ -15,7 +15,7 @@ const AppNavbar = ({ title }) => {
 };
 
 AppNavbar.defaultProps = {
-	title: 'CRUD Person'
+	title: 'CRUD Person v2'
 };
 
 AppNavbar.propTypes = {
